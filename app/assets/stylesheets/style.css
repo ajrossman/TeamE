@@ -27,7 +27,8 @@
 }
 
 .button-segment {
-  opacity: .6;
+  opacity: .4;
+  -webkit-filter: grayscale(1);
   transition: opacity .25s ease-in-out;
   -moz-transition: opacity .25s ease-in-out;
   -webkit-transition: opacity .25s ease-in-out;

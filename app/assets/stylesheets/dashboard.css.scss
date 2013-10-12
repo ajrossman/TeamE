@@ -1,6 +1,7 @@
 // Place all the styles related to the Dashboard controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
+html,body { height:100%; }
 .habit-bar { max-width: 100%; margin-top: 4px; }
 .main-content { padding-top: 75px }
 #eat-icon, #exercise-icon, #outdoor-icon {
@@ -20,6 +21,19 @@
     height: 30px;
     min-height: 30px;
   }
+}
+
+.home-content {
+  height: 100%;
+  background: url('/assets/background.png') no-repeat top center;
+}
+
+.home-content .about {
+  background-color: #fff;
+  margin: 50px auto 100px;
+  width: 80%;
+  padding: 50px;
+  opacity: 0.9;
 }
 // .habit-bar {
 //   span {
