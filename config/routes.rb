@@ -3,6 +3,7 @@ TeamE::Application.routes.draw do
 
   get "dashboard/index"
   get "dashboard/:user_id" => "dashboard#show", as: 'user_dashboard'
+  get "send_email/:user_id" => "dashboard#send_email", as: "user_email"
   mount RailsAdmin::Engine => '/admin', :as => 'rails_admin'
 
   post "events/create"
