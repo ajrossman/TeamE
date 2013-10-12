@@ -10,7 +10,7 @@
             <h3 class="pull-right">Max</h3>
           </div>
   				<div class="row streak-status">
-            <div class="col-xs-1 col-md-1"><%= render partial: 'exercise_icon' %></div>
+            <div class="<%= 'finished' if @user.finished_exercise? %> col-xs-1 col-md-1"><%= render partial: 'exercise_icon' %></div>
             <div class="col-xs-10 col-md-10">
               <%= render partial: "habit_bar", locals: {events: @exercise_events} %>
             </div>
@@ -18,7 +18,7 @@
   				</div>
   				
   				<div class="row streak-status">
-            <div class="col-xs-1 col-md-1"><%= render partial: 'eat_icon' %></div>
+            <div class="<%= 'finished' if @user.finished_eat? %> col-xs-1 col-md-1"><%= render partial: 'eat_icon' %></div>
             <div class="col-xs-10 col-md-10">
               <%= render partial: "habit_bar", locals: {events: @eat_events} %>
             </div>
@@ -26,7 +26,7 @@
   				</div>
   				
   				<div class="row streak-status">
-            <div class="col-xs-1 col-md-1"><%= render partial: 'outdoor_icon' %></div>
+            <div class="<%= 'finished' if @user.finished_outdoors? %> col-xs-1 col-md-1"><%= render partial: 'outdoor_icon' %></div>
             <div class="col-xs-10 col-md-10">
               <%= render partial: "habit_bar", locals: {events: @outdoor_events} %>
             </div>
