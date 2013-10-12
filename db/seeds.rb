@@ -4,9 +4,12 @@ puts "Creating user 1"
 u1 = User.create!(
   name: 'Sleep E Hacker',
   email: 'sleepy@hotmail.com',
-  eat_streak: 0,
-  exercise_streak: 0,
-  outdoor_streak: 0,
+  eat_streak: 1,
+  exercise_streak: 2,
+  outdoor_streak: 2,
+  eat_record: 9,
+  exercise_record: 8,
+  outdoor_record: 8,
   lat: 44.4758,
   long: 73.2119
 )
@@ -36,6 +39,9 @@ u2 = User.create!(
   eat_streak: 20,
   exercise_streak: 20,
   outdoor_streak: 20,
+  eat_record: 20,
+  exercise_record: 20,
+  outdoor_record: 20,
   lat: 44.4758,
   long: 73.2119
 )
@@ -60,6 +66,9 @@ u3 = User.create!(
   eat_streak: 20,
   exercise_streak: 20,
   outdoor_streak: 20,
+  eat_record: 20,
+  exercise_record: 20,
+  outdoor_record: 20,
   lat: 44.2035,
   long: 72.5623
 )

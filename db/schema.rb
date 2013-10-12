@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20131012021731) do
+ActiveRecord::Schema.define(version: 20131012115426) do
 
   create_table "events", force: true do |t|
     t.integer  "user_id"
@@ -41,6 +41,9 @@ ActiveRecord::Schema.define(version: 20131012021731) do
     t.float    "long"
     t.datetime "created_at"
     t.datetime "updated_at"
+    t.integer  "eat_record"
+    t.integer  "exercise_record"
+    t.integer  "outdoor_record"
   end
 
 end
