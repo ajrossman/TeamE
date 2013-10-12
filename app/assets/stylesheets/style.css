@@ -22,3 +22,17 @@
 .streak-number p {
   padding-top: 10px;
 }
+
+.eat,.exercise,.explore
+{
+	opacity: .6;
+    transition: opacity .25s ease-in-out;
+   -moz-transition: opacity .25s ease-in-out;
+   -webkit-transition: opacity .25s ease-in-out;
+}
+
+.eat:hover,.exercise:hover,.explore:hover
+{
+   
+    opacity: 1;
+}
