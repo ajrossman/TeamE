@@ -134,5 +134,5 @@ s5 = Suggestion.create!(
   link: "http://www.radicalrootsvt.com/",
   what: "Cook up some fresh beets",
   where: "Radical Roots Farm at Rutland Farmers Market",
-  why: "High in anti-oxidants, anti-imflamitory, high in fiber, may reduce certain cancers"
+  why: "High in anti-oxidants, anti-imflammatory, high in fiber, may reduce certain cancers"
   )
