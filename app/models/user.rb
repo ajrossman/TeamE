@@ -14,5 +14,17 @@ class User < ActiveRecord::Base
   def outside_today?
     outdoor_events.exists?(event_date: Date.today)
   end
+
+  def finished_exercise?
+    exercise_events.where("event_date >= ?", (Date.today - 21.days)).count >= 21
+  end
+
+  def finished_eat?
+    eat_events.where("event_date >= ?", (Date.today - 21.days)).count >= 21
+  end
+
+  def finished_outdoors?
+    outdoor_events.where("event_date >= ?", (Date.today - 21.days)).count >= 21
+  end
 end
 

@@ -19,18 +19,11 @@
 	</div>
 	
 	<div class="email-body" style="padding:5px;">
-    <p>Hi <%= @user.name %>,</p>
+		<p>Hi USER,</p>
 	
-    <p>Yesterday you ate healthy and explored. Congratulations — <%= link_to "you've added to two streaks!", user_dashboard_path(@user) %></a> Great job!</p>
+		<p>Oh no! Looks like you didn't keep your streak alive yesterday.</p>
 
-		<h2>Current streaks</h2>
-			<ul>
-				<li>Exercising: 20</li>
-				<li>Eating: 15</li>
-				<li>Exploring: 19</li>
-			</ul>
-
-		<p>What healthy habit will you commit to today? How about <a href="#">eating locally grown lettuce</a>?</p>
+		<p>You can get back on track today. How about <a href="#">going for a walk to Battery Park</a>?</p>
 	
 		<p>Sincerely,<br />
 		Healthy Habits VT</p>
