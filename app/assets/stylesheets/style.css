@@ -1,3 +1,6 @@
+.button-wrap {
+  text-align: center;
+}
 .streak-status {
 	border:1px solid #E7E7E7;
 	background-color:#F8F8F8;
@@ -23,16 +26,22 @@
   padding-top: 10px;
 }
 
-.eat,.exercise,.explore
-{
-	opacity: .6;
-    transition: opacity .25s ease-in-out;
-   -moz-transition: opacity .25s ease-in-out;
-   -webkit-transition: opacity .25s ease-in-out;
+.button-segment {
+  opacity: .6;
+  transition: opacity .25s ease-in-out;
+  -moz-transition: opacity .25s ease-in-out;
+  -webkit-transition: opacity .25s ease-in-out;
 }
 
-.eat:hover,.exercise:hover,.explore:hover
-{
-   
-    opacity: 1;
+.button-segment:hover {
+  cursor: pointer;
 }
+
+.button-segment.done {
+  cursor: default;
+}
+
+.button-segment.done, .button-segment:hover {
+  opacity: 1;
+}
+

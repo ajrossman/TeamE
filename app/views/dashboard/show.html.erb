@@ -1,37 +1,35 @@
     <div class="container main-content">
     	<div class="row">
-  			<div class="col-md-5">
+  			<div class="col-md-5 button-wrap">
+          <h3>What did you do today?</h3>
           <%= render "the_button" %>
   			</div>
   			<div class="col-md-7">
           <div class="row">
-            <h3 class="pull-left">Current Streak</h3>
-            <h3 class="pull-right">Longest Streak</h3>
+            <h3 class="pull-left">Path to Habit</h3>
+            <h3 class="pull-right">Max</h3>
           </div>
   				<div class="row streak-status">
             <div class="col-xs-1 col-md-1"><%= render partial: 'exercise_icon' %></div>
-            <div class="col-xs-9 col-md-9">
+            <div class="col-xs-10 col-md-10">
               <%= render partial: "habit_bar", locals: {events: @exercise_events} %>
             </div>
-            <div class="col-xs-1 col-md-1 streak-number"><p><%= @user.exercise_streak %></p></div>
             <div class="col-xs-1 col-md-1 streak-number"><p><%= @user.exercise_record %></p></div>
   				</div>
   				
   				<div class="row streak-status">
             <div class="col-xs-1 col-md-1"><%= render partial: 'eat_icon' %></div>
-            <div class="col-xs-9 col-md-9">
+            <div class="col-xs-10 col-md-10">
               <%= render partial: "habit_bar", locals: {events: @eat_events} %>
             </div>
-            <div class="col-xs-1 col-md-1 streak-number"><p><%= @user.eat_streak %></p></div>
             <div class="col-xs-1 col-md-1 streak-number"><p><%= @user.eat_record %></p></div>
   				</div>
   				
   				<div class="row streak-status">
             <div class="col-xs-1 col-md-1"><%= render partial: 'outdoor_icon' %></div>
-            <div class="col-xs-9 col-md-9">
+            <div class="col-xs-10 col-md-10">
               <%= render partial: "habit_bar", locals: {events: @outdoor_events} %>
             </div>
-            <div class="col-xs-1 col-md-1 streak-number"><p><%= @user.outdoor_streak %></p></div>
             <div class="col-xs-1 col-md-1 streak-number"><p><%= @user.outdoor_record %></p></div>
   				</div>
   			</div>
