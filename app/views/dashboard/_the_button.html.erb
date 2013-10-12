@@ -1,10 +1,7 @@
-<?xml version="1.0" encoding="utf-8"?>
-<!-- Generator: Adobe Illustrator 16.0.0, SVG Export Plug-In . SVG Version: 6.00 Build 0)  -->
-<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
 <svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
 	 width="303.988px" height="303.992px" viewBox="0 0 303.988 303.992" enable-background="new 0 0 303.988 303.992"
 	 xml:space="preserve">
-<g id="Explore" class="explore">
+<g id="Explore" class="explore" onclick="formSubmit('outdoor_form')">
 	<path id="explore" fill="#3992A9" d="M20.35,227.982c26.261,45.44,75.333,76.01,131.645,76.01
 		c56.312,0,105.384-30.568,131.647-76.01l-131.647-75.987L20.35,227.982z"/>
 	<g>
@@ -27,7 +24,7 @@
 			c0-0.656-0.531-1.188-1.186-1.188c-0.655,0-1.186,0.53-1.186,1.188V275.826z"/>
 	</g>
 </g>
-<g id="Eat" class="eat">
+<g id="Eat" class="eat" onclick="formSubmit('eat_form')">
 	<path id="eat" fill="#4DC5E5" d="M151.995,0v151.995l131.647,75.987c12.92-22.354,20.346-48.287,20.346-75.987
 		C303.988,67.982,236.008,0,151.995,0z"/>
 	<g>
@@ -55,7 +52,7 @@
 		</g>
 	</g>
 </g>
-<g id="Exercise" class="exercise">
+<g id="Exercise" class="exercise" onclick="formSubmit('exercise_form')">
 	<path id="exercise" fill="#267184" d="M151.995,0C67.982,0,0,67.982,0,151.996c0,27.7,7.428,53.635,20.35,75.987l131.645-75.987V0z
 		"/>
 	<g>
@@ -101,3 +98,15 @@
 	</g>
 </g>
 </svg>
+<form action="<%= events_create_path(event: {event_date: Date.today, user_id: @user.id, type: "EatEvent"}) %>"
+  method="POST"
+  id="eat_form">
+</form>
+<form action="<%= events_create_path(event: {event_date: Date.today, user_id: @user.id, type: "ExerciseEvent"}) %>"
+  method="POST"
+  id="exercise_form">
+</form>
+<form action="<%= events_create_path(event: {event_date: Date.today, user_id: @user.id, type: "OutdoorEvent"}) %>"
+  method="POST"
+  id="outdoor_form">
+</form>

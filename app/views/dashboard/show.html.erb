@@ -1,9 +1,55 @@
-<div class="habit-bar">
-  <% ((Date.today - 21.days)..Date.today).each do |date| %>
-    <% if @eat_events.any? { |event| event.event_date == date } %>
-      <span class="complete"></span>
-    <% else %>
-      <span class="incomplete"></span>
-    <% end %>
-  <% end %>
-</div>
+    <div class="container" style="padding-top:50px;">
+    	<div class="row">
+  			<div class="col-md-5">
+          <%= render "the_button" %>
+  			</div>
+  			<div class="col-md-7">
+  				<div class="row streak-status">
+            <div class="col-xs-10 col-md-10">
+              <%= render partial: "habit_bar", locals: {events: @eat_events} %>
+            </div>
+            <div class="col-xs-1 col-md-1 streak-number"><%= @user.eat_streak %></div>
+  					<div class="col-xs-1 col-md-1 streak-number">42</div>
+  				</div>
+  				
+  				<div class="row streak-status">
+            <div class="col-xs-10 col-md-10">
+              <%= render partial: "habit_bar", locals: {events: @exercise_events} %>
+            </div>
+            <div class="col-xs-1 col-md-1 streak-number"><%= @user.exercise_streak %></div>
+  					<div class="col-xs-1 col-md-1 streak-number">42</div>
+  				</div>
+  				
+  				<div class="row streak-status">
+            <div class="col-xs-10 col-md-10">
+              <%= render partial: "habit_bar", locals: {events: @outdoor_events} %>
+            </div>
+            <div class="col-xs-1 col-md-1 streak-number"><%= @user.outdoor_streak %></div>
+  					<div class="col-xs-1 col-md-1 streak-number">42</div>
+  				</div>
+  			</div>
+		</div>
+		
+		
+		
+		<div class="row">
+			<div class="col-xs-12">
+				<div class="panel panel-default">
+  					<div class="panel-heading">
+    					<h3 class="panel-title">Today's to-do</h3>
+  					</div>
+  					<div class="panel-body">
+    					Go to Ethan Allen Park in Burlington and climb to the top of the tower.
+    					<div class="confirm-deny pull-right">
+    					<button type="button" class="btn btn-success btn-lg">
+  							<span class="glyphicon glyphicon-ok"></span>
+						</button>
+						<button type="button" class="btn btn-danger btn-lg">
+  							<span class="glyphicon glyphicon-remove"></span>
+						</button>
+						</div>
+  					</div>
+				</div>
+			</div>
+		</div>
+    </div> <!-- /container -->
