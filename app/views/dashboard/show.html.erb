@@ -1,0 +1,9 @@
+<div class="habit-bar">
+  <% ((Date.today - 21.days)..Date.today).each do |date| %>
+    <% if @eat_events.any? { |event| event.event_date == date } %>
+      <span class="complete"></span>
+    <% else %>
+      <span class="incomplete"></span>
+    <% end %>
+  <% end %>
+</div>

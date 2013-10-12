@@ -65,13 +65,13 @@ u3 = User.create!(
 )
 
 (Date.new(2013,9,22)..Date.new(2013,10,11)).each do |date|
-  u2.eat_events.create!(event_date: date)
+  u3.eat_events.create!(event_date: date)
 end
 
 (Date.new(2013,9,22)..Date.new(2013,10,11)).each do |date|
-  u2.exercise_events.create!(event_date: date)
+  u3.exercise_events.create!(event_date: date)
 end
 
 (Date.new(2013,9,22)..Date.new(2013,10,11)).each do |date|
-  u2.outdoor_events.create!(event_date: date)
+  u3.outdoor_events.create!(event_date: date)
 end
