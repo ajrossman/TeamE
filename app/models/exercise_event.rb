@@ -1,3 +1,3 @@
-class ExerciseEvent < ActiveRecord::Base
-	belongs_to :user
+class ExerciseEvent < Event
+
 end

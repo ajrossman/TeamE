@@ -1,2 +1,3 @@
-class OutdoorEvent < ActiveRecord::Base
+class OutdoorEvent < Event
+
 end

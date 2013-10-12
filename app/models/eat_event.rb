@@ -1,3 +1,3 @@
-class EatEvent < ActiveRecord::Base
-	belongs_to :user
+class EatEvent < Event
+
 end

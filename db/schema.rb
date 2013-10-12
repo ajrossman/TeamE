@@ -11,20 +11,12 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20131012021409) do
+ActiveRecord::Schema.define(version: 20131012021731) do
 
-  create_table "eat_events", force: true do |t|
-    t.datetime "date"
-    t.datetime "created_at"
-    t.datetime "updated_at"
-  end
-
-  create_table "exercise_events", force: true do |t|
-    t.datetime "created_at"
-    t.datetime "updated_at"
-  end
-
-  create_table "outdoor_events", force: true do |t|
+  create_table "events", force: true do |t|
+    t.integer  "user_id"
+    t.date     "event_date"
+    t.string   "type"
     t.datetime "created_at"
     t.datetime "updated_at"
   end
@@ -40,8 +32,7 @@ ActiveRecord::Schema.define(version: 20131012021409) do
   end
 
   create_table "users", force: true do |t|
-    t.string   "first_name"
-    t.string   "last_name"
+    t.string   "name"
     t.string   "email"
     t.integer  "eat_streak"
     t.integer  "exercise_streak"
