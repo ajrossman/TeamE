@@ -1,0 +1,3 @@
+class ExerciseEvent < Event
+
+end

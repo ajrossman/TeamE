@@ -1,0 +1,3 @@
+class OutdoorEvent < Event
+
+end

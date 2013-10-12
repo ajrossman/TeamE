@@ -1,0 +1,3 @@
+class EatEvent < Event
+
+end
