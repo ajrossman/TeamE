@@ -1,8 +1,12 @@
 class EventsController < ApplicationController
+  protect_from_forgery with: :null_session
   def create
     @event = event_type.new(event_params)
     if @event.save
-      head :ok
+      user = User.find(params[:event][:user_id])
+      redirect_to user_dashboard_path(user.id)
+    else
+      redirect_to :root
     end
   end
 
