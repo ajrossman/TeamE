@@ -5,7 +5,8 @@
   			</div>
   			<div class="col-md-7">
   				<div class="row streak-status">
-            <div class="col-xs-10 col-md-10">
+            <div class="col-xs-1 col-md-1"><%= render partial: 'eat_icon' %></div>
+            <div class="col-xs-9 col-md-9">
               <%= render partial: "habit_bar", locals: {events: @eat_events} %>
             </div>
             <div class="col-xs-1 col-md-1 streak-number"><%= @user.eat_streak %></div>
@@ -13,7 +14,8 @@
   				</div>
   				
   				<div class="row streak-status">
-            <div class="col-xs-10 col-md-10">
+            <div class="col-xs-1 col-md-1"><%= render partial: 'exercise_icon' %></div>
+            <div class="col-xs-9 col-md-9">
               <%= render partial: "habit_bar", locals: {events: @exercise_events} %>
             </div>
             <div class="col-xs-1 col-md-1 streak-number"><%= @user.exercise_streak %></div>
@@ -21,7 +23,8 @@
   				</div>
   				
   				<div class="row streak-status">
-            <div class="col-xs-10 col-md-10">
+            <div class="col-xs-1 col-md-1"><%= render partial: 'outdoor_icon' %></div>
+            <div class="col-xs-9 col-md-9">
               <%= render partial: "habit_bar", locals: {events: @outdoor_events} %>
             </div>
             <div class="col-xs-1 col-md-1 streak-number"><%= @user.outdoor_streak %></div>
