@@ -5,7 +5,7 @@ TeamE::Application.routes.draw do
   get "dashboard/:user_id" => "dashboard#show", as: 'user_dashboard'
   mount RailsAdmin::Engine => '/admin', :as => 'rails_admin'
 
-  put "events/create"
+  post "events/create"
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
 
