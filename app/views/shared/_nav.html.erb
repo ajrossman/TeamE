@@ -10,11 +10,17 @@
           <a class="navbar-brand" href="<%= root_path %>">Healthy Habit VT</a>
         </div>
         <div class="navbar-collapse collapse">
-          <% unless @user.nil? %>
-            <ul class="nav navbar-nav pull-right">
-              <li class="active"><a href="<%= user_dashboard_path(@user) %>"><%= @user.name %></a></li>
-            </ul>
-          <% end %>
+          <ul class="nav navbar-nav navbar-right">
+            <li class="dropdown">
+              <a data-toggle="dropdown" href="#"><%= @user.nil? ? "Users" : @user.name %></a>
+              <ul class="dropdown-menu pull-right">
+                <% User.all.each do |user| %>
+                  <li><%= link_to user.name, user_dashboard_path(user) %></li>
+                <% end %>
+              </ul>
+            </li>
+          </ul>
+          </div>
         </div><!--/.nav-collapse -->
       </div>
     </div>
