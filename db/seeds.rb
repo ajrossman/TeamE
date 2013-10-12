@@ -34,7 +34,7 @@ u1.outdoor_events.find_by(event_date: '2013-10-09').destroy
 
 puts "Creating user 2"
 u2 = User.create!(
-  name: 'Peter Brown',
+  name: 'Freddy Getfit',
   email: 'pete@hotmail.com',
   eat_streak: 20,
   exercise_streak: 20,
@@ -61,8 +61,8 @@ end
 puts "Creating user 3"
 
 u3 = User.create!(
-  name: 'AJ Rossman',
-  email: 'a@hotmail.com',
+  name: 'Margot Faster',
+  email: 'margot@hotmail.com',
   eat_streak: 20,
   exercise_streak: 20,
   outdoor_streak: 20,
