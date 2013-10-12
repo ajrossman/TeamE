@@ -6,7 +6,9 @@ u1 = User.create!(
   email: 'sleepy@hotmail.com',
   eat_streak: 0,
   exercise_streak: 0,
-  outdoor_streak: 0
+  outdoor_streak: 0,
+  lat: 44.4758,
+  long: 73.2119
 )
 
 (Date.new(2013,10,1)..Date.new(2013,10,11)).each do |date|
@@ -33,7 +35,9 @@ u2 = User.create!(
   email: 'pete@hotmail.com',
   eat_streak: 20,
   exercise_streak: 20,
-  outdoor_streak: 20
+  outdoor_streak: 20,
+  lat: 44.4758,
+  long: 73.2119
 )
 
 (Date.new(2013,9,22)..Date.new(2013,10,11)).each do |date|
@@ -55,7 +59,9 @@ u3 = User.create!(
   email: 'a@hotmail.com',
   eat_streak: 20,
   exercise_streak: 20,
-  outdoor_streak: 20
+  outdoor_streak: 20,
+  lat: 44.2035,
+  long: 72.5623
 )
 
 (Date.new(2013,9,22)..Date.new(2013,10,11)).each do |date|
