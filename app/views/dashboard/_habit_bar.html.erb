@@ -1,13 +1,13 @@
 <svg class="habit-bar" version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
-   width="605.058px" height="22.921px" viewBox="0 0 605.058 22.921" enable-background="new 0 0 605.058 22.921"
+   width="605.058px" height="50px" viewBox="0 0 605.058 50" enable-background="new 0 0 605.058 50"
    xml:space="preserve">
 <g>
 <% xspan = 29.107 %>
 <% ((Date.today - 20.days)..Date.today).each_with_index do |date, index| %>
   <% if events.any? { |event| event.event_date == date } %>
-    <rect fill="#82C560" x="<%= xspan * index %>" width="22.921" height="22.921"/>
+    <rect fill="#82C560" x="<%= xspan * index %>" width="22.921" height="50"/>
   <% else %>
-    <rect fill="#D2E2C9" x="<%= xspan * index %>" width="22.921" height="22.921"/>
+    <rect fill="#D2E2C9" x="<%= xspan * index %>" width="22.921" height="50"/>
   <% end %>
 <% end %>
 </g>
