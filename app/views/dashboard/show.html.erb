@@ -6,20 +6,7 @@
   			<div class="col-md-7">
   				<div class="row streak-status">
             <div class="col-xs-10 col-md-10">
-                <svg class="habit-bar" version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
-                   width="605.058px" height="22.921px" viewBox="0 0 605.058 22.921" enable-background="new 0 0 605.058 22.921"
-                   xml:space="preserve">
-                <g>
-                <% xspan = 29.107 %>
-                <% ((Date.today - 20.days)..Date.today).each_with_index do |date, index| %>
-                  <% if @eat_events.any? { |event| event.event_date == date } %>
-                    <rect fill="#82C560" x="<%= xspan * index %>" width="22.921" height="22.921"/>
-                  <% else %>
-                    <rect fill="#D2E2C9" x="<%= xspan * index %>" width="22.921" height="22.921"/>
-                  <% end %>
-                <% end %>
-                </g>
-                </svg>
+              <%= render partial: "habit_bar", locals: {events: @eat_events} %>
             </div>
             <div class="col-xs-1 col-md-1 streak-number"><%= @user.eat_streak %></div>
   					<div class="col-xs-1 col-md-1 streak-number">42</div>
@@ -27,20 +14,7 @@
   				
   				<div class="row streak-status">
             <div class="col-xs-10 col-md-10">
-                <svg class="habit-bar" version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
-                   width="605.058px" height="22.921px" viewBox="0 0 605.058 22.921" enable-background="new 0 0 605.058 22.921"
-                   xml:space="preserve">
-                <g>
-                <% xspan = 29.107 %>
-                <% ((Date.today - 20.days)..Date.today).each_with_index do |date, index| %>
-                  <% if @exercise_events.any? { |event| event.event_date == date } %>
-                    <rect fill="#82C560" x="<%= xspan * index %>" width="22.921" height="22.921"/>
-                  <% else %>
-                    <rect fill="#D2E2C9" x="<%= xspan * index %>" width="22.921" height="22.921"/>
-                  <% end %>
-                <% end %>
-                </g>
-                </svg>
+              <%= render partial: "habit_bar", locals: {events: @exercise_events} %>
             </div>
             <div class="col-xs-1 col-md-1 streak-number"><%= @user.exercise_streak %></div>
   					<div class="col-xs-1 col-md-1 streak-number">42</div>
@@ -48,20 +22,7 @@
   				
   				<div class="row streak-status">
             <div class="col-xs-10 col-md-10">
-                <svg class="habit-bar" version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
-                   width="605.058px" height="22.921px" viewBox="0 0 605.058 22.921" enable-background="new 0 0 605.058 22.921"
-                   xml:space="preserve">
-                <g>
-                <% xspan = 29.107 %>
-                <% ((Date.today - 20.days)..Date.today).each_with_index do |date, index| %>
-                  <% if @outdoor_events.any? { |event| event.event_date == date } %>
-                    <rect fill="#82C560" x="<%= xspan * index %>" width="22.921" height="22.921"/>
-                  <% else %>
-                    <rect fill="#D2E2C9" x="<%= xspan * index %>" width="22.921" height="22.921"/>
-                  <% end %>
-                <% end %>
-                </g>
-                </svg>
+              <%= render partial: "habit_bar", locals: {events: @outdoor_events} %>
             </div>
             <div class="col-xs-1 col-md-1 streak-number"><%= @user.outdoor_streak %></div>
   					<div class="col-xs-1 col-md-1 streak-number">42</div>
