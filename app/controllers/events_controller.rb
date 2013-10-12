@@ -12,7 +12,7 @@ class EventsController < ApplicationController
 
   private
   def event_type
-    params[:event][:type].constantize
+    params[:event].delete(:type).constantize
   end
 
   def event_params
