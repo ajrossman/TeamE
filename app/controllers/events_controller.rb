@@ -4,6 +4,9 @@ class EventsController < ApplicationController
     @event = event_type.new(event_params)
     if @event.save
       user = User.find(params[:event][:user_id])
+      event = "#{@event.class.to_s.underscore.gsub("_event","")}_record"
+      user.increment(event)
+      user.save
       redirect_to user_dashboard_path(user.id)
     else
       redirect_to :root

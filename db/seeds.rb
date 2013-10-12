@@ -7,30 +7,24 @@ u1 = User.create!(
   eat_streak: 1,
   exercise_streak: 2,
   outdoor_streak: 2,
-  eat_record: 9,
-  exercise_record: 8,
-  outdoor_record: 8,
+  eat_record: 2,
+  exercise_record: 2,
+  outdoor_record: 2,
   lat: 44.4758,
   long: 73.2119
 )
 
-(Date.new(2013,10,1)..Date.new(2013,10,11)).each do |date|
+(Date.new(2013,10,10)..Date.new(2013,10,11)).each do |date|
   u1.eat_events.create!(event_date: date)
 end
 
-u1.eat_events.find_by(event_date: ['2013-10-10', '2013-10-9']).destroy
-
-(Date.new(2013,10,1)..Date.new(2013,10,11)).each do |date|
+(Date.new(2013,10,10)..Date.new(2013,10,11)).each do |date|
   u1.exercise_events.create!(event_date: date)
 end
 
-u1.exercise_events.find_by(event_date: '2013-10-09').destroy
-
-(Date.new(2013,10,1)..Date.new(2013,10,11)).each do |date|
+(Date.new(2013,10,10)..Date.new(2013,10,11)).each do |date|
   u1.outdoor_events.create!(event_date: date)
 end
-
-u1.outdoor_events.find_by(event_date: '2013-10-09').destroy
 
 puts "Creating user 2"
 u2 = User.create!(
@@ -39,22 +33,24 @@ u2 = User.create!(
   eat_streak: 20,
   exercise_streak: 20,
   outdoor_streak: 20,
-  eat_record: 20,
-  exercise_record: 20,
-  outdoor_record: 20,
+  eat_record: 6,
+  exercise_record: 11,
+  outdoor_record: 11,
   lat: 44.4758,
   long: 73.2119
 )
 
-(Date.new(2013,9,22)..Date.new(2013,10,11)).each do |date|
+(Date.new(2013,10,1)..Date.new(2013,10,11)).each do |date|
   u2.eat_events.create!(event_date: date)
 end
 
-(Date.new(2013,9,22)..Date.new(2013,10,11)).each do |date|
+(Date.new(2013,10,1)..Date.new(2013,10,11)).each do |date|
   u2.exercise_events.create!(event_date: date)
 end
 
-(Date.new(2013,9,22)..Date.new(2013,10,11)).each do |date|
+u2.eat_events.find_by(event_date: '2013-10-05').destroy
+
+(Date.new(2013,10,1)..Date.new(2013,10,11)).each do |date|
   u2.outdoor_events.create!(event_date: date)
 end
 
