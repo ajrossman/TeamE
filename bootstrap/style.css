@@ -1,0 +1,17 @@
+.streak-status {
+	border:1px solid #E7E7E7;
+	background-color:#F8F8F8;
+	border-radius:4px;
+	margin-bottom:15px;
+}
+
+.streak-number {
+	font-weight:600;
+	text-align:center;
+	text-shadow:2px 2px #666;
+	color:#fff;
+	background-color:#00CC00;
+	font-size:16px;
+	border:1px solid #E7E7E7;
+	padding:0;
+}
