@@ -3,7 +3,7 @@
    xml:space="preserve">
 <g>
 <% xspan = 29.107 %>
-<% event_count = events.count %>
+<% event_count = 0 %>
 <% if (Date.today - events.first.event_date) < 21 %>
   <% ((events.first.event_date..events.last.event_date)).each_with_index do |date, index| %>
     <% if events.any? { |event| event.event_date == date } %>
@@ -11,8 +11,9 @@
     <% else %>
       <rect fill="#D2E2C9" x="<%= xspan * index %>" width="22.921" height="50"/>
     <% end %>
+    <% event_count += 1 %>
   <% end %>
-  <% (event_count+1..21).each do |index| %>
+  <% (event_count..21).each do |index| %>
     <rect fill="#D2E2C9" x="<%= xspan * index %>" width="22.921" height="50"/>
   <% end %>
 <% else %>
