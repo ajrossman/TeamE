@@ -10,6 +10,17 @@
   margin-top: 4px;
   min-height: 50px;
 }
+
+.do-today {
+  .panel-title {
+    font-size: 20px;
+  }
+  margin-top: 20px;
+  #eat-icon, #exercise-icon, #outdoor-icon {
+    height: 30px;
+    min-height: 30px;
+  }
+}
 // .habit-bar {
 //   span {
 //     border: 1px solid;
