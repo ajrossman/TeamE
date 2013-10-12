@@ -1,9 +1,72 @@
-<div class="habit-bar">
-  <% ((Date.today - 21.days)..Date.today).each do |date| %>
-    <% if @eat_events.any? { |event| event.event_date == date } %>
-      <span class="complete"></span>
-    <% else %>
-      <span class="incomplete"></span>
-    <% end %>
-  <% end %>
-</div>
+    <div class="container" style="padding-top:50px;">
+    	<div class="row">
+  			<div class="col-md-5">
+  				<img src="https://chart.googleapis.com/chart?cht=pc&chd=s:Helo,Wrld&chs=500x300" class="img-responsive" >
+  			</div>
+  			<div class="col-md-7">
+  				<div class="row streak-status">
+            <div class="col-xs-10 col-md-10">
+                <svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+                   width="605.058px" height="22.921px" viewBox="0 0 605.058 22.921" enable-background="new 0 0 605.058 22.921"
+                   xml:space="preserve">
+                <g>
+                <% xspan = 29.107 %>
+                <% ((Date.today - 20.days)..Date.today).each_with_index do |date, index| %>
+                  <% if @eat_events.any? { |event| event.event_date == date } %>
+                    <rect fill="#82C560" x="<%= xspan * index %>" width="22.921" height="22.921"/>
+                    <% puts xspan * index %>
+                  <% else %>
+                    <% puts xspan * index %>
+                    <rect fill="#D2E2C9" x="<%= xspan * index %>" width="22.921" height="22.921"/>
+                  <% end %>
+                <% end %>
+                </g>
+                </svg>
+            </div>
+  					<div class="col-xs-1 col-md-1 streak-number">05</div>
+  					<div class="col-xs-1 col-md-1 streak-number">42</div>
+  				</div>
+  				
+  				<div class="row streak-status">
+  					<div class="col-xs-8 col-md-8">EXPLORE</div>
+  					<div class="col-xs-2 col-md-2 streak-number">05</div>
+  					<div class="col-xs-2 col-md-2 streak-number">42</div>
+  				</div>
+  				
+  				<div class="row streak-status">
+  					<div class="col-xs-8 col-md-8">EXERCISE</div>
+  					<div class="col-xs-2 col-md-2 streak-number">05</div>
+  					<div class="col-xs-2 col-md-2 streak-number">42</div>
+  				</div>
+  				
+  				<div class="row streak-status">
+  					<div class="col-xs-8 col-md-8">TOTAL</div>
+  					<div class="col-xs-2 col-md-2 streak-number">05</div>
+  					<div class="col-xs-2 col-md-2 streak-number">42</div>
+  				</div>
+  			</div>
+		</div>
+		
+		
+		
+		<div class="row">
+			<div class="col-xs-12">
+				<div class="panel panel-default">
+  					<div class="panel-heading">
+    					<h3 class="panel-title">Today's to-do</h3>
+  					</div>
+  					<div class="panel-body">
+    					Go to Ethan Allen Park in Burlington and climb to the top of the tower.
+    					<div class="confirm-deny pull-right">
+    					<button type="button" class="btn btn-success btn-lg">
+  							<span class="glyphicon glyphicon-ok"></span>
+						</button>
+						<button type="button" class="btn btn-danger btn-lg">
+  							<span class="glyphicon glyphicon-remove"></span>
+						</button>
+						</div>
+  					</div>
+				</div>
+			</div>
+		</div>
+    </div> <!-- /container -->

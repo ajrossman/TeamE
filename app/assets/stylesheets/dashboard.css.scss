@@ -4,8 +4,6 @@
 .habit-bar {
   span {
     border: 1px solid;
-    padding: 20px;
-    width: 20px;
     height: 10px;
     &.complete {
       background: -webkit-linear-gradient(top, #b4ddb4 0%,#83c783 17%,#52b152 33%,#008a00 67%,#005700 83%,#002400 100%); /* Chrome10+,Safari5.1+ */
